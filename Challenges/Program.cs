@@ -1,4 +1,5 @@
 ﻿using System;
+using Challenges.Arrays;
 
 namespace Challenges
 {
@@ -6,7 +7,11 @@ namespace Challenges
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] arrayToReverse = new[] { 1, 2, 3 };
+
+            Reverse.ReverseArray(arrayToReverse);
+
+            Console.WriteLine(String.Join(",", arrayToReverse));
         }
     }
 }
