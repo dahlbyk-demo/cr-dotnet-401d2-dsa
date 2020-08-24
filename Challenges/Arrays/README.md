@@ -4,3 +4,5 @@
 
 Input: array
 Output: array
+
+![whiteboard 01](../../assets/challenge01.png)
