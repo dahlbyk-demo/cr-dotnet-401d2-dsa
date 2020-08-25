@@ -1,10 +1,12 @@
-﻿namespace Challenges.Arrays
+﻿using System.Linq;
+
+namespace Challenges.Arrays
 {
     public class Reverse
     {
         public static int[] ReverseArray(int[] array)
         {
-            return array;
+            return array.Reverse().ToArray();
         }
     }
 }
