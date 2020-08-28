@@ -12,7 +12,26 @@ namespace DataStructures.Tests.LinkedLists
             LinkedList list = new LinkedList();
 
             // Assert
-            // TODO: Assert!
+            Assert.Equal("NULL", list.ToString());
+        }
+
+        [Fact(Skip = "TODO for students")]
+        public void Insert_adds_value_to_start()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+
+            // Act
+            list.Insert(1);
+
+            // Assert
+            Assert.Equal("{ 1 } -> NULL", list.ToString());
+
+            // Act
+            list.Insert(2);
+
+            // Assert
+            Assert.Equal("{ 2 } -> { 1 } -> NULL", list.ToString());
         }
     }
 }
