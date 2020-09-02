@@ -13,6 +13,7 @@ namespace DataStructures.Tests.LinkedLists
 
             // Assert
             Assert.Equal("NULL", list.ToString());
+            Assert.Empty(list);
         }
 
         [Fact]
@@ -26,12 +27,14 @@ namespace DataStructures.Tests.LinkedLists
 
             // Assert
             Assert.Equal("{ 1 } -> NULL", list.ToString());
+            Assert.Equal(new[] { 1 }, list);
 
             // Act
             list.Insert(2);
 
             // Assert
             Assert.Equal("{ 2 } -> { 1 } -> NULL", list.ToString());
+            Assert.Equal(new[] { 2, 1 }, list);
         }
     }
 }
