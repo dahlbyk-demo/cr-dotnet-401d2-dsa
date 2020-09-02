@@ -6,7 +6,11 @@
 
         public void Insert(int value)
         {
-            // TODO
+            Head = new Node
+            {
+                Value = value,
+                Next = Head,
+            };
         }
 
         public bool Includes(int value)

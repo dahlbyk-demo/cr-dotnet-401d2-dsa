@@ -15,7 +15,7 @@ namespace DataStructures.Tests.LinkedLists
             Assert.Equal("NULL", list.ToString());
         }
 
-        [Fact(Skip = "TODO for students")]
+        [Fact]
         public void Insert_adds_value_to_start()
         {
             // Arrange
