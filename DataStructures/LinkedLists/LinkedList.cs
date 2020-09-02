@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace DataStructures.LinkedLists
 {
-    public class LinkedList : IEnumerable<int>
+    public class LinkedList<T> : IEnumerable<T>
     {
-        public Node Head { get; set; }
+        public Node<T> Head { get; set; }
 
-        public void Insert(int value)
+        public void Insert(T value)
         {
-            Head = new Node
+            Head = new Node<T>
             {
                 Value = value,
                 Next = Head,
             };
         }
 
-        public bool Includes(int value)
+        public bool Includes(T value)
         {
             // TODO
             return false;
@@ -26,7 +26,7 @@ namespace DataStructures.LinkedLists
         {
             string result = "";
 
-            Node current = Head;
+            Node<T> current = Head;
             while (current != null)
             {
                 result += $"{{ {current.Value} }} -> ";
@@ -36,9 +36,9 @@ namespace DataStructures.LinkedLists
             return result + "NULL";
         }
 
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
-            Node current = Head;
+            Node<T> current = Head;
             while (current != null)
             {
                 // Include this value in the sequence

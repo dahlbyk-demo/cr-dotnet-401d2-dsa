@@ -9,7 +9,7 @@ namespace DataStructures.Tests.LinkedLists
         public void LinkedList_starts_empty()
         {
             // Act
-            LinkedList list = new LinkedList();
+            LinkedList<string> list = new LinkedList<string>();
 
             // Assert
             Assert.Equal("NULL", list.ToString());
@@ -20,7 +20,7 @@ namespace DataStructures.Tests.LinkedLists
         public void Insert_adds_value_to_start()
         {
             // Arrange
-            LinkedList list = new LinkedList();
+            LinkedList<int> list = new LinkedList<int>();
 
             // Act
             list.Insert(1);
