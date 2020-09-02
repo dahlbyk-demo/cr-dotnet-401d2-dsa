@@ -9,29 +9,32 @@ namespace DataStructures.Tests.LinkedLists
         public void LinkedList_starts_empty()
         {
             // Act
-            LinkedList list = new LinkedList();
+            LinkedList<string> list = new LinkedList<string>();
 
             // Assert
             Assert.Equal("NULL", list.ToString());
+            Assert.Empty(list);
         }
 
-        [Fact(Skip = "TODO for students")]
+        [Fact]
         public void Insert_adds_value_to_start()
         {
             // Arrange
-            LinkedList list = new LinkedList();
+            LinkedList<int> list = new LinkedList<int>();
 
             // Act
             list.Insert(1);
 
             // Assert
             Assert.Equal("{ 1 } -> NULL", list.ToString());
+            Assert.Equal(new[] { 1 }, list);
 
             // Act
             list.Insert(2);
 
             // Assert
             Assert.Equal("{ 2 } -> { 1 } -> NULL", list.ToString());
+            Assert.Equal(new[] { 2, 1 }, list);
         }
     }
 }
